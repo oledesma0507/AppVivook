@@ -1,0 +1,106 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <div class="row content-form">
+    <div class="col-md-6 col-sm-6 col-xs-12 bloq-login" >
+      <div class="navbar navbar-light bg-faded TagsOptionPrinc">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" role="tab" data-toggle="tab" href="#registro">Registrate</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link active" role="tab" data-toggle="tab" href="#login">Iniciar<br>Sesion</a>
+          </li>
+        </ul>  
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12 bloq-info">
+      <div class="row content-form">
+        <div class="content-inf col-md-12">
+          <img src="assets/img/logo.png" alt="Vivook">
+        </div>
+        <div class="row tab-content">
+          <div role="tabpanel" class="tab-pane col-md-12" id="login">
+            <form class="form-row" name="form1" method="post" action="">
+              <div class="form-row col-md-12">
+                <div class="form-group col-md-6  offset-md-3">
+                  <div class="input-group input-login">
+                    <span class="input-group-addon"><span class="glyphicon icon-user"></span></span>
+                    <input class="form-control form-login" size="16" type="text" placeholder="USUARIO" value="" required>
+                  </div>
+                  <div class="input-group input-login">
+                    <span class="input-group-addon"><span class="glyphicon icon-lock"></span></span>
+                    <input class="form-control form-login" size="16" type="text" placeholder="CONTRASEÑA" value="" required>
+                  </div>
+                </div>
+                <div class="form-group col-md-6 offset-md-3">
+                  <div class="btn-send">
+                    <input type="submit" class="form-control btn-filtro" id="enviar" name="ingresar" value="INGRESAR">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div role="tabpanel" class="tab-pane active col-md-12" id="registro">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <a href="reg_condom.php">
+                  <div class="btn-usertype">
+                    <img src="assets/img/icon-condomino.png" alt="" />
+                    <span>¿Eres Condómino?</span>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <a href="reg_admin.php">
+                  <div class="btn-usertype">
+                    <img src="assets/img/icon-administrador.png" alt="" />
+                    <span>¿Eres administrador?</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="row bloq-contact">
+            <div class="col-md-12">
+              <h2>CONTACTO</h2>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 content-notif">
+              <ul class="bloq-notif">
+                <li>
+                  <ul class="bloq-notif-int">
+                    <li><span style="font-size:16px;" class="glyphicon icon-phone"></span> NUMEROS TELÉFONICOS</li>
+                    <li><span>+52 (55) 3300 0626</span></li>
+                    <li><span>+52 (55) 3300 0625</span></li>
+                    <li><span>+52 (55) 3300 0662</span></li>
+                  </ul>
+                </li>
+                <li><span style="font-size:16px;" class="glyphicon icon-envelop"></span>+52 1 (55) 5989 7254</li>
+                <li><span style="font-size:16px;" class="glyphicon icon-whatsapp"></span><a href="mailto:ventas@vivook.com">ventas@vivook.com</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 content-notif">
+              <ul class="bloq-notif">
+                <li><span style="font-size:16px;" class="glyphicon icon-clock"></span> HORARIO DE ATENCIÓN:  Lunes a Viernes de 8am a 5pm (hora de México)</li>
+                <li><span style="font-size:16px;" class="glyphicon icon-location"></span> OFICINAS CENTRALES</li>
+                <li>José Luis Lagrange 103 piso 9, Col. Los Morales Polanco, 11510 CDMX, México.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 footer">
+      <div class="row">
+        <div class="col-md-9 col-xs-12">
+          <ul class="links-footer">
+            <li><a href="#">AVISO DE PRIVACIDAD</a></li>
+            <li><a href="#">POLITICAS DE SEGURIDAD</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-xs-12">
+          <p>© 2019 - Software todos los derechos reservados</p>
+        </div>
+      </div>
+  </div>
+<router-outlet></router-outlet>
+
