@@ -11,13 +11,16 @@ body
 	font-family: 'Roboto' !important
 	font-size: 1.2em
 	line-height: 24px
-	color: #666
+	color: #212529
 	background-color: #fff
 
 h1, h2, h3, h4, h5, h6 
 	color: #333
 	font-family: 'Roboto'
 	text-transform: uppercase
+
+ul li 
+	font-size: 1rem
 
 h1
 	background-color:#333
@@ -31,33 +34,16 @@ h2
 h3
 	font-size: 16px
 
-body,html
-	height: 100%
-
-
 =btn-generator($btn-color)
 	padding:12px
 	color:$title-sec
 
-.bloq-login
-	background:
-		image:url('../assets/img/background-login.jpg')
-		size: cover
-	position:absolute
-	top:0px
-	left:0px
-	border-left: 
-		size:2px !important
-		color:#0088C9
-		style:solid
-	min-height:900px
-
 .bloq-info
-	text-align:center
+	text-align: center
 
 .logo-app
-	display:block
-	margin:auto
+	display: block
+	margin: auto
 h2
 	+btn-generator($title-sec)
 	font:
@@ -65,89 +51,6 @@ h2
 
 .nav-tabs
 	border-bottom: none
-
-/*----------------Login--------------------*\
-
-.bloq-info div.row
-	margin: 0
-  
-.content-form
-	margin: 0
-
-.bloq-info
-	position: relative
-	left: 0%
-
-.content-inf img
-	display: block
-	margin: auto
-	padding: 0
-
-.bloq-notif
-	list-style: none
- 
-.bloq-notif li
-	padding-bottom: 20px
-
-.bloq-notif-int
-	list-style: none
-	padding: 0
-
-.bloq-notif-int li
-	padding: 0
-
-.bloq-notif li span
-	padding-left: 0px
-
-.glyphicon
-	color: #FD6603
-	padding-right: 10px
-
-.bloq-login form.form-row
-	margin-top: 40%
-
-.form-register
-	padding: 25px
-
-.form-login
-	background: transparent !important
-	border-top: none
-	border-bottom: 1px #0088C9 solid !important
-	webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.075)
-	box-shadow: inset 0 0px 0px rgba(0,0,0,.075)
-	border-top: none !important
-	border-left: none !important
-	border-right: none !important
-	border-radius: 0 !important
-
-.input-login
-	margin-bottom: 40px
-	color: #fff
-
-.input-login span
-	color: #CCCCCC
-	background: transparent
-	line-height: 40px
-
-.links-footer
-	list-style: none
-
-.links-footer li
-	display: block
-	float: left
-	height: 20px
-
-.links-footer li a
-	color: #fff
-	padding: 0 10px
-
-.links-footer li:first-child
-	border-right: 1px #fff solid
-
-.footer
-	position: absolute
-	bottom: 10px
-	font-size: .8em
 
 .form-link
 	text-align: right
@@ -164,66 +67,7 @@ h2
 .btn-cancelar-recup-pass
 	text-align: center
 	line-height: 4em
-	display: block
-
-/* Login ------------------------------------*/
-
-/*----------------Registro--------------------*\
-  
-
-.tab-content
-	margin: 0
-
-
-.btn-usertype
-	background-color: #E6E6E6
-	-webkit-border-radius: 10px
-	-moz-border-radius: 10px
-	border-radius: 10px
-	border: .5px #0071BC solid
-	margin: 5px
-
-.btn-usertype:hover
-	background-color: #EDEEEF
-
-
-.btn-usertype img
-	display: block
-	margin: auto
-	width: 80%
-
-.btn-usertype span
-	text-align: center
-	display: block
-	font-size: 1.3em
-	padding: 20px 0
-
-.nav-link
-	border: none
-
-.bloq-form h3
-	background-color: #F2F2F2
-	padding: 5px 0
-
-.bloq-form h3 strong
-	background-color: #4D4D4D
-	-webkit-border-radius: 50px
-	-moz-border-radius: 50px
-	border-radius: 50px
-	color: #fff
-	width: 20px
-	height: 20px
-	display: block
-	float: left
-	text-align: center
-	padding: 2px
-	margin-right: 4px
-
-/* Registro ------------------------------------*/
-
-/*----------------Filtro--------------------*\
-  
-
+	display: block  
 
 .form-control
 	background-color: transparent
@@ -239,11 +83,11 @@ h2
 
 .input-group-addon
 	background-color: #e6e6e6
-	border:none
+	border: none
 
 .caja
 	overflow: hidden
-	position:relative
+	position: relative
 
 select
 	background: transparent
@@ -258,13 +102,13 @@ select:focus
 
 .caja::after
 	content:"\025be"
-	display:table-cell
+	display: table-cell
 	padding-top:7px
-	text-align:center
+	text-align: center
 	width:30px
 	height:34px
 	background-color:#e6e6e6
-	position:absolute
+	position: absolute
 	top:0
 	right:0px
 	pointer-events: none
@@ -274,45 +118,6 @@ select:focus
 	background-color: #00719E !important
 	color: #fff
 	height: 48px
-
-.TagsOptionPrinc
-	position: absolute
-	top: 40%
-	right: 0%
-	z-index: 1000
-	width: 180px
-
-.TagsOptionPrinc ul li
-	display: block
-	float: left
-	list-style: none
-	width: 100%
-	line-height: 1.5em
-	padding: 20px 35px 20px 0px
-	text-transform: uppercase
-	text-align: right
-	font-size: 1.3em
-
-.TagsOptionPrinc ul li a
-	color:#fff
-  
-.TagsOptionPrinc ul li a:hover
-	color:#333
-
-.TagsOptionPrinc ul li.active
-	background-color: #fff
-	-webkit-border-radius: 5px
-	-moz-border-radius: 5px
-	border-radius: 5px
-	color:#0088C9
-
-.TagsOptionPrinc ul li.active a
-	color:#0088C9
-
-.bloq-contact
-	margin-top: 70px
-	padding: 40px
-	margin-right: 0
 
 .limpiar
 	clear: both
@@ -396,6 +201,7 @@ select:focus
 	font-style: normal
 	font-weight: 400
 	line-height: 1
+	color: #fd6603
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 
