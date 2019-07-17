@@ -1,7 +1,8 @@
-<div role="tabpanel" class="tab-pane active col-md-12" id="registro">
+<app-header></app-header>
+<div role="tabpanel" class="tab-pane col-md-12" id="registro" *ngIf="router.url === '/registro'">
   <div class="row">
     <div class="col-md-6 col-sm-6 col-xs-12">
-      <a href="reg_condom.php">
+      <a routerLink="cond">
         <div class="btn-usertype">
           <img src="assets/img/icon-condomino.png" alt="" />
           <span>¿Eres Condómino?</span>
@@ -9,7 +10,7 @@
       </a>
     </div><!-- .col-xs-12 -->
     <div class="col-md-6 col-sm-6 col-xs-12">
-      <a href="reg_admin.php">
+      <a routerLink="admin">
         <div class="btn-usertype">
           <img src="assets/img/icon-administrador.png" alt="" />
           <span>¿Eres administrador?</span>
@@ -18,3 +19,5 @@
     </div><!-- .col-xs-12 -->
   </div><!-- .row -->
 </div><!-- .col-md-12 -->
+<router-outlet></router-outlet>
+<app-contacto></app-contacto>

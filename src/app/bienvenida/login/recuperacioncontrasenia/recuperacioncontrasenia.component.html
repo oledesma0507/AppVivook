@@ -1,27 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="row tab-content">
-  <div class="tab-pane active" id="login">
-    <p class="text-recup-pass">
-      <strong>¿No recuerdas tu contraseña?</strong><br><br>
-      Ingresa tu dirección de correo electrónico que utilizas en Vivook y te enviaremos un correo con las instrucciones para restablecerla.
-    </p>
-    <section class=" col-md-6 offset-md-3">
-      <form class="form-row" name="form1" method="post" action="">
-        <div class="form-row form-register">
-          <div class="form-group col-md-12">
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu correo Electronico" required="required">
-          </div>
-          <div class="form-link col-md-6">
-              <a class="btn-cancelar-recup-pass" href="#">CANCELAR</a>
-          </div>
-          <div class="form-group col-md-6">
-            <div class="btn-send">
-              <input type="submit" class="form-control btn-filtro" id="enviar" name="Consultar" value="Enviar">
-            </div>
-          </div>
-        </div>
-      </form>
-      <div class="limpiar"></div>
-    </section>
-  </div>
-</div>
+<app-header></app-header>
+<div class="row tab-content" *ngIf="router.url === '/password-recovery'">
+  <p class="text-recup-pass"><strong>¿No recuerdas tu contraseña?</strong><br><br>Ingresa tu dirección de correo electrónico que utilizas en Vivook y te enviaremos un correo con las instrucciones para restablecerla.</p>
+  <section class=" col-md-6 offset-md-3">
+    <form class="form-row" name="form1" method="post" action="">
+      <div class="form-row form-register">
+        <div class="form-group col-md-12">
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu correo Electronico" required="required">
+        </div><!-- .form-group -->
+        <div class="form-link col-md-6">
+          <a class="btn-cancelar-recup-pass" routerLink="/login">CANCELAR</a>
+        </div><!-- .form-link -->
+        <div class="form-group col-md-6">
+          <div class="btn-send">
+            <a routerLink="confirmation"><button class="form-control btn-filtro">Enviar</button></a>
+          </div><!-- .btn-send -->
+        </div><!-- .form-group -->
+      </div><!-- .form-register -->
+    </form>
+    <div class="limpiar"></div>
+  </section>
+</div><!-- .tab-content -->
+<router-outlet></router-outlet>
+<app-contacto></app-contacto>

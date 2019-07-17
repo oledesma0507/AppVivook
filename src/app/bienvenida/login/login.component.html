@@ -1,4 +1,28 @@
 <app-header></app-header>
-<app-selector-usuario></app-selector-usuario>
+<div role="tabpanel" class="tab-pane col-md-12" id="login">
+  <form class="form-row" name="form1" method="post" action="">
+    <div class="form-row col-md-12">
+      <div class="form-group col-md-6  offset-md-3">
+        <div class="input-group input-login">
+          <span class="input-group-addon"><span class="glyphicon icon-user"></span></span>
+          <input class="form-control form-login" size="16" type="text" placeholder="USUARIO" value="" required>
+        </div><!-- .input-login -->
+        <div class="input-group input-login">
+          <span class="input-group-addon"><span class="glyphicon icon-lock"></span></span>
+          <input class="form-control form-login" size="16" type="text" placeholder="CONTRASEÑA" value="" required>
+        </div><!-- .input-login -->
+      </div><!-- .form-group -->
+      <div class="form-group col-md-6 offset-md-3">
+        <div class="btn-send">
+          <input type="submit" class="form-control btn-filtro" id="enviar" name="ingresar" value="INGRESAR">
+        </div><!-- .btn-send -->
+      </div><!-- .form-group -->
+      <div class="form-group col-md-6 offset-md-3">
+        <a class="form-link" routerLink="/password-recovery">¿Olvidaste tu contraseña?</a><br>
+        <a class="form-link" routerLink="/registro">No tienes cuenta, registrate aquí</a>
+      </div>
+    </div><!-- .form-row -->
+  </form>
+</div><!-- .tab-pane -->
 <app-contacto></app-contacto>
 
