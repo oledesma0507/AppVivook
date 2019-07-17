@@ -20,4 +20,4 @@
   </div><!-- .row -->
 </div><!-- .col-md-12 -->
 <router-outlet></router-outlet>
-<app-contacto></app-contacto>
+<app-contacto *ngIf="router.url !== '/registro/admin'"></app-contacto>
