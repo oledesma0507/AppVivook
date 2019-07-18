@@ -3,17 +3,18 @@
 <div class="row tab-content" *ngIf="router.url === '/password-recovery'">
   <p class="text-recup-pass"><strong>¿No recuerdas tu contraseña?</strong><br><br>Ingresa tu dirección de correo electrónico que utilizas en Vivook y te enviaremos un correo con las instrucciones para restablecerla.</p>
   <section class=" col-md-6 offset-md-3">
-    <form class="form-row" name="form1" method="post" action="">
+    <form (ngSubmit)="onSubmit()" class="form-row" #f="ngForm">
       <div class="form-row form-register">
         <div class="form-group col-md-12">
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu correo Electronico" required="required">
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa tu correo Electronico" ngModel name="email" required email #email="ngModel">
+          <span class="help-block" *ngIf="!email.valid && email.touched">Por favor ingresa un correo válido</span>
         </div><!-- .form-group -->
         <div class="form-link col-md-6">
           <a class="btn-cancelar-recup-pass" routerLink="/login">CANCELAR</a>
         </div><!-- .form-link -->
         <div class="form-group col-md-6">
           <div class="btn-send">
-            <a routerLink="confirmation"><button class="form-control btn-filtro">Enviar</button></a>
+            <a routerLink="confirmation"><button class="form-control btn btn-filtro" [disabled]="!f.valid">Enviar</button></a>
           </div><!-- .btn-send -->
         </div><!-- .form-group -->
       </div><!-- .form-register -->

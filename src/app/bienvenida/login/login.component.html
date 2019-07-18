@@ -1,20 +1,22 @@
 <app-header></app-header>
 <div role="tabpanel" class="tab-pane col-md-12" id="login">
-  <form class="form-row" name="form1" method="post" action="">
+  <form (ngSubmit)="onSubmit()" class="form-row" #f="ngForm">
     <div class="form-row col-md-12">
       <div class="form-group col-md-6  offset-md-3">
         <div class="input-group input-login">
           <span class="input-group-addon"><span class="glyphicon icon-user"></span></span>
-          <input class="form-control form-login" size="16" type="text" placeholder="USUARIO" value="" required>
+          <input class="form-control form-login" size="16" type="text" placeholder="USUARIO" ngModel name="user" required #user="ngModel">
+          <span class="help-block" *ngIf="!user.valid && user.touched">Por favor ingresa un usuario válido</span>
         </div><!-- .input-login -->
         <div class="input-group input-login">
           <span class="input-group-addon"><span class="glyphicon icon-lock"></span></span>
-          <input class="form-control form-login" size="16" type="text" placeholder="CONTRASEÑA" value="" required>
+          <input class="form-control form-login" size="16" type="password" placeholder="CONTRASEÑA" ngModel name="password" required #password="ngModel">
+          <span class="help-block" *ngIf="!password.valid && password.touched">Por favor ingresa una contraseña válida</span>
         </div><!-- .input-login -->
       </div><!-- .form-group -->
       <div class="form-group col-md-6 offset-md-3">
         <div class="btn-send">
-          <input type="submit" class="form-control btn-filtro" id="enviar" name="ingresar" value="INGRESAR">
+          <button class="form-control btn btn-primary btn-filtro" type="submit" id="enviar" [disabled]="!f.valid">INGRESAR</button>
         </div><!-- .btn-send -->
       </div><!-- .form-group -->
       <div class="form-group col-md-6 offset-md-3">
