@@ -23,30 +23,35 @@
           <span class="help-block" *ngIf="!pais.valid && pais.touched">Por favor selecciona tu país</span>
         </div>
         <div class="form-group col-md-6">
-          <label for="exampleFormControlInput4">Teléfono</label>
-          <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="" required="required">
+          <label for="telephone">Teléfono</label>
+          <input type="tel" class="form-control" id="telephone" ngModel name="telephone" required #telephone="ngModel">
+          <span class="help-block" *ngIf="!telephone.valid && telephone.touched">Por favor ingresa tu número telefónico</span>
         </div>
         <div class="bloq-form col-md-12">
           <h3><strong>2</strong> Credenciales</h3>
         </div>
         <div class="form-group col-md-6">
-          <label for="exampleFormControlInput5">Email</label>
-          <input type="email" class="form-control" id="exampleFormControlInput5" placeholder="" required="required">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" ngModel name="email" required email #email="ngModel">
+          <span class="help-block" *ngIf="!email.valid && email.touched">Por favor ingresa un correo válido</span>
         </div>
         <div class="form-group col-md-6">
-          <label for="exampleFormControlInput6">Password</label>
-          <input type="password" class="form-control" id="exampleFormControlInput6" placeholder="" required="required">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" ngModel name="password" required password #password="ngModel">
+          <span class="help-block" *ngIf="!password.valid && password.touched">Por favor ingresa tu contraseña</span>
         </div>
         <div class="bloq-form col-md-12">
           <h3><strong>3</strong> Datos del Condominio</h3>
         </div>
         <div class="form-group col-md-6">
-          <label for="exampleFormControlInput7">Nombre del Condominio</label>
-          <input type="text" class="form-control" id="exampleFormControlInput7" placeholder="" required="required">
+          <label for="condoName">Nombre del Condominio</label>
+          <input type="text" class="form-control" id="condoName" ngModel name="condoName" required #condoName="ngModel">
+          <span class="help-block" *ngIf="!condoName.valid && condoName.touched">Por favor ingresa el nombre de tu condominio</span>
         </div>
         <div class="form-group col-md-6">
-          <label for="exampleFormControlInput8">Total de Viviendas</label>
-          <input type="text" class="form-control" id="exampleFormControlInput8" placeholder="" required="required">
+          <label for="viviendas">Total de Viviendas</label>
+          <input type="number" class="form-control" id="viviendas" ngModel name="viviendas" required min="1" #viviendas="ngModel">
+          <span class="help-block" *ngIf="!viviendas.valid && viviendas.touched">Por favor ingresa el total de viviendas</span>
         </div>
         <div class="form-group col-md-6">
           <div class="re-captcha">
@@ -55,7 +60,7 @@
         </div>
         <div class="form-group col-md-6">
           <div class="btn-send">
-            <input type="submit" class="form-control btn-filtro" id="enviar" name="Consultar" value="Enviar">
+            <button type="submit" class="form-control btn btn-filtro" [disabled]="!f.valid">Enviar</button>
           </div>
         </div>
       </div>
