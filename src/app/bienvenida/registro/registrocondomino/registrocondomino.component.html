@@ -2,32 +2,32 @@
   <section>
     <form (ngSubmit)="onSubmit()" class="form-row" #f="ngForm">
       <div class="form-row form-register">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-6 col-sm-6">
           <label for="name">Nombre</label>
           <input type="text" class="form-control" id="name" ngModel name="name" required #name="ngModel">
           <span class="help-block" *ngIf="!name.valid && name.touched">Por favor ingresa tu(s) nombre(s)</span>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-6 col-sm-6">
           <label for="apellido">Apellido</label>
           <input type="text" class="form-control" id="apellido" ngModel name="apellido" required #lastname="ngModel">
           <span class="help-block" *ngIf="!lastname.valid && lastname.touched">Por favor ingresa tu(s) apellido(s)</span>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-6 col-sm-6">
           <label for="email">Email</label>
           <input type="email" class="form-control" id="email" ngModel name="email" required email #email="ngModel">
           <span class="help-block" *ngIf="!email.valid && email.touched">Por favor ingresa un correo válido</span>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-6 col-sm-6">
           <label for="condoName">Nombre del Condominio</label>
           <input type="text" class="form-control" id="condoName" ngModel name="condoName" required #condoname="ngModel">
           <span class="help-block" *ngIf="!condoname.valid && condoname.touched">Por favor ingresa el nombre de tu condominio</span>
         </div>
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-6 col-sm-6">
         <div class="re-captcha">
           <img src="assets/img/newCaptchaAnchor.gif" alt="" width="250" />
         </div>
       </div>
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-6 col-sm-6">
         <div class="btn-send">
           <button type="submit" class="form-control btn btn-filtro" [disabled]="!f.valid">Enviar</button>
         </div>
